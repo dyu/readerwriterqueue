@@ -1,0 +1,12 @@
+
+config("readerwriterqueue_config") {
+  include_dirs = [ "." ]
+}
+
+source_set("readerwriterqueue") {
+  sources = [
+    "readerwriterqueue.h",
+    "atomicops.h",
+  ]
+  public_configs = [ ":readerwriterqueue_config" ]
+}
